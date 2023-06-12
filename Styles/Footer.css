@@ -1,0 +1,33 @@
+.footer {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 209px;
+    background: black;
+    color: var(--colorWhite);;
+    font-size: 24px;
+}
+
+.img_footer { 
+    margin: 0 auto; 
+}
+.img_footer img { 
+    height: 60px; 
+    width: 163px; 
+}
+.info { 
+    height: 46px; 
+    text-align: center; 
+}
+.info p { 
+    margin-top: 10px; 
+}
+
+
+@media (max-width: 450px) {
+    .info p { 
+        font-size: 12px; 
+    }
+}

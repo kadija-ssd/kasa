@@ -1,0 +1,44 @@
+.banner-commun {
+    margin-top: 30px;
+    height: 223px;
+    color: var(--colorWhite);
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px rgb(66, 58, 58);
+}
+
+.banner {
+    background: url("../Assets/BackgroundFilter\ .png"), url("../Assets/BackgroundHome.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+.banner2 {
+    background: url("../Assets/BackgroundFilter\ .png"), url("../Assets/Background\ .jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+.banner h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .banner h1 { 
+        font-size: 1rem; 
+    }
+    .banner, .banner2 {
+        margin-top: 0px;
+        height: 111px;
+        background-position:left;
+    }
+    .banner2, .banner, .banner-commun { 
+        border-radius: 10px; 
+    }
+}

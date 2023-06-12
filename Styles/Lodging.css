@@ -1,0 +1,100 @@
+/*
+*    Utilisation de GRID au lieu de FLEX.
+-
+-    Avec Flex, lors de l'affichage des cartes logements, la ligne du bas n'ayant pas 
+-    une totalité d'éléments, ceux-ci se centrent et sur les conseils de mon Mentor 
+~    ATHECK GABRIEL 
+-    cette disposition n'est pas une bonne habitude à prendre.
+-    Il m'a conseillé de faire en sorte qu'ils soient affichés en partant de la gauche.
+*/
+
+/* DÉBUT: conteneur d'affichage des cartes logements */
+.locations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    justify-content: center;
+    background: #F7F7F7;
+    border-radius: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 50px;
+}
+
+.locations a {
+     text-decoration: none;
+}
+/* FIN: conteneur d'affichage des cartes logements */
+
+
+
+/* DÉBUT: carte logement */
+.fiche-locations {
+    background-image: linear-gradient(180deg, #FF6060, #FF6060, #FF6060, #833131);
+    border-radius: 10px;
+    transition: 0.3s;
+    min-width: 280px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.fiche-locations img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    height: 260px;
+    object-fit: cover;
+}
+
+.fiche-locations h3 {
+    display: flex;
+    height: 65px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 142.6%;
+    margin: 0px 20px;
+    align-items: center;
+    overflow: hidden;  /* empêche le titre de sortir du bloc */
+    color: white;
+}
+
+.fiche-locations:hover {
+    box-shadow: 0px 0px 10px #473030;
+    cursor: pointer;
+}
+/* FIN: carte logement */
+
+
+/* Responsive */
+@media (max-width: 926px) {
+    .locations { 
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    }
+}
+
+ @media (max-width: 768px) {
+    .locations {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+        background: #FFF;
+        padding: 0;
+        grid-row-gap: 20px;
+    }
+    .fiche-locations {
+        min-width: 200px;
+        height: 255px;
+    }
+    .fiche-locations img { 
+        height: 188px; 
+    }
+}
+
+@media (max-width: 400px) {
+    .fiche-locations { 
+        width: 100%; 
+    }
+    .locations {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        margin-top: 20px;
+        padding: 0;
+    }
+} 
